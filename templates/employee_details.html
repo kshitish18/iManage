@@ -1,20 +1,19 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <body>
     <div class="container pt-5">
       <div class="card mx-auto" style="width: 18rem;">
-        <img class="card-img-top" src="{{employee.photo.url}}" alt="employee-photo">
-        <div class="card-body">
+        <img class="card-img-top" src="{{employee.photo.url}}" alt="employee-photo" style="height: 200px; width: 100%; object-fit: contain; object-position: center;">        <div class="card-body text-center">
           <p class="card-text m-0">{{ employee.first_name }} {{ employee.last_name }} </p>
           <p class="card-text m-0">{{ employee.designation }} </p>
           <p class="card-text m-0">{{ employee.email_address }} </p>
           <p class="card-text m-0">{{ employee.phone_number }} </p>
         </div>
-        <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+        <div class="card-footer text-center">
+          <a href="{% url 'home' %}" class="btn btn-primary">Back to Home</a>
+        </div>
       </div>
     </div>
-  </body>
-</html>
+
 
 {% endblock %}

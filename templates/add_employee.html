@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container pt-5">
+  <h4>Add New Employee:</h4>
+  <form
+    method="POST"
+    enctype="multipart/form-data"
+    class="needs-validation"
+    novalidate
+  >
+    {% csrf_token %}
+
+    <div class="mb-3">
+      <label for="first_name" class="form-label">First Name</label>
+      {{ form.first_name }}
+    </div>
+
+    <div class="mb-3">
+      <label for="last_name" class="form-label">Last Name</label>
+      {{ form.last_name }}
+    </div>
+
+    <div class="mb-3">
+      <label for="designation" class="form-label">Designation</label>
+      {{ form.designation }}
+    </div>
+
+    <div class="mb-3">
+      <label for="email_address" class="form-label">Email Address</label>
+      {{ form.email_address }}
+    </div>
+
+    <div class="mb-3">
+      <label for="phone_number" class="form-label">Phone Number</label>
+      {{ form.phone_number }}
+    </div>
+
+    <div class="mb-3">
+      <label for="photo" class="form-label">Photo</label>
+      {{ form.photo }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add Employee</button>
+  </form>
+  <a href="{% url 'home' %}" class="btn btn-primary mt-3">Back to Home</a>
+</div>
+{% endblock %}
+
+
+
