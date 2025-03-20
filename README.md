@@ -11,6 +11,3 @@
 
 - Django
 - Bootstrap
-
-
-```
