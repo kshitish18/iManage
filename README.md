@@ -12,25 +12,5 @@
 - Django
 - Bootstrap
 
-## Installation
-
-Instructions on how to set up the project locally.
-
-```bash
-# Clone the repository
-git clone https://github.com/kshitish18/iManage.git
-
-# Navigate to the project directory
-cd django-basics
-
-# Install dependencies
-
-pip install -r requirements.txt
-
-# Set up the database
-python manage.py migrate
-
-# Run the development server
-python manage.py runserver
 
 ```
